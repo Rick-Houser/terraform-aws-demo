@@ -7,5 +7,8 @@ Deploys a VPC, subnet, EC2 instance, and S3 bucket on AWS.
 2. Configure AWS: `aws configure`.
 3. Run:
    ```bash
-   terraform init
-   terraform apply
+   terraform plan -out=plan.tfplan
+   terraform apply "plan.tfplan"
+4. Clean up: `terraform destroy`
+
+![Architecture Diagram](terraform-aws-demo.png)
